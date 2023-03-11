@@ -1,12 +1,12 @@
-import './App.css';
-import FirstComponent from './components/FirstComponent';
+import './App.css'
+import FirstComponent from './components/FirstComponent'
 
-function App() {
+function App () {
   return (
     <div className="App">
       <FirstComponent />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
