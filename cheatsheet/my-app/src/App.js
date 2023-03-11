@@ -1,10 +1,11 @@
 import './App.css'
-import FirstComponent from './components/FirstComponent'
+import FirstComponent, { SecondComponent } from './components/FirstComponent'
 
 function App () {
   return (
     <div className="App">
-      <FirstComponent />
+      <FirstComponent title ="Titulo enviado desde el padre" date="9 de Marzo de 2023"/>
+      <SecondComponent />
     </div>
   )
 }
