@@ -1,8 +1,10 @@
 import './App.css'
-
+import Shop from './components/Shop.js'
 function App () {
   return (
-    <div className='App' />
+    <div className='App'>
+      <Shop />
+    </div>
   )
 }
 
