@@ -10,13 +10,18 @@ export default function FirstComponent (props) {
   )
 }
 
-function SecondComponent () {
+function SecondComponent (props) {
   const buttonInfo = {
     info: 'ClIcK mE!'
   }
   return (
     // Aqui las props las enviamos desde una constante creada antes del return
-    <button>{buttonInfo.info}</button>
+    <button id={props.id}>{buttonInfo.info}</button>
   )
 }
 export { SecondComponent }
+
+FirstComponent.defaultProps = {
+  title: 'Otro Titulo',
+  date: '10 Dic 1998'
+}
