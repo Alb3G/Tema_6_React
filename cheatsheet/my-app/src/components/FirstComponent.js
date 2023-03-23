@@ -1,3 +1,4 @@
+// import PropTypes from 'prop-types'
 export default function FirstComponent (props) {
 //   console.log(props.title)
   return (
@@ -23,5 +24,9 @@ export { SecondComponent }
 
 FirstComponent.defaultProps = {
   title: 'Otro Titulo',
-  date: '10 Dic 1998'
+  date: 'sin fecha'
 }
+// FirstComponent.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   date: PropTypes.string
+// }
