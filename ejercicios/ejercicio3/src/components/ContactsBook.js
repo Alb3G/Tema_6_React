@@ -1,19 +1,22 @@
 export default function Contacts ({ contacts }) {
-  const contact = contacts.map(({ id, name, lastName, address, city, postalCode, phone }) => {
+  const contactUl = contacts.map(({ id, name, lastName, address, city, postalCode, phone }) => {
     return (
-      <ul key={id}>
-        <li key={id + phone}>{name}</li>
-        <li key={id + phone}>{lastName}</li>
-        <li key={id + phone}>{address}</li>
-        <li key={id + phone}>{city}</li>
-        <li key={id + phone}>{postalCode}</li>
-      </ul>
+      <div key={name + id} className='d-inline-flex'>
+        <ul key={id} className='list-group mb-3 mx-3'>
+          <li className='list-group-item active'>Contact - {id}</li>
+          <li className='list-group-item '>{name}</li>
+          <li className='list-group-item '>{lastName}</li>
+          <li className='list-group-item '>{phone}</li>
+          <li className='list-group-item '>{address} {postalCode} {city}</li>
+          <li className='list-group-item '><button type='button' className='btn btn-warning'>Delete</button></li>
+        </ul>
+      </div>
     )
   })
 
   return (
     <>
-      {contact}
+      {contactUl}
     </>
   )
 }
