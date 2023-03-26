@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Form from './components/Form'
 
 function App () {
-  const [contacts] = useState([
+  const [contacts, setContacts] = useState([
     {
       id: 1,
       name: 'Alberto',
@@ -67,7 +67,7 @@ function App () {
     <div className='App container'>
       <h1>Lista de Contactos</h1>
       <ContactsBook contacts={contacts} />
-      <Form />
+      <Form setContacts={setContacts} />
     </div>
   )
 }

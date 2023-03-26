@@ -1,9 +1,9 @@
 export default function Contacts ({ contacts }) {
   const contactUl = contacts.map(({ id, name, lastName, address, city, postalCode, phone }) => {
     return (
-      <div key={name + id} className='d-inline-flex'>
+      <div key={phone + id} className='d-inline-flex'>
         <ul key={id} className='list-group mb-3 mx-3'>
-          <li className='list-group-item active'>Contact - {id}</li>
+          <li className='list-group-item active'>Contact</li>
           <li className='list-group-item '>{name}</li>
           <li className='list-group-item '>{lastName}</li>
           <li className='list-group-item '>{phone}</li>
