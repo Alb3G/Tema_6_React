@@ -32,16 +32,24 @@ export default function Form ({ setContacts }) {
     const newContact = { name, lastName, phone, address, postalCode, city }
     // si a setContacts le pasamos una funcion por parametro nos devuelve el valor actual de lo que vale "contacts" sin tener que importarlo.
     setContacts((contacts) => [...contacts, newContact])
+    // event.target.reset() no usamos esta forma ni la de setState('') para gestionar los formularios primero porque el reset
+    // nos vacia el input pero los estados son los mismos
+    setName('')
+    setLastName('')
+    setPhone('')
+    setAddress('')
+    setPostalCode('')
+    setCity('')
   }
 
   return (
     <form className='form-group container' onSubmit={submit}>
-      <input type='text' className='form-control mb-3' onChange={handleName} placeholder='Add name ✏️' />
-      <input type='text' className='form-control mb-3' onChange={handleLastName} placeholder='Add Last name ✏️' />
-      <input type='number' className='form-control mb-3' onChange={handlePhone} placeholder='Add phone number 📞' />
-      <input type='text' className='form-control mb-3' onChange={handleAddress} placeholder='Add address 🏠' />
-      <input type='number' className='form-control mb-3' onChange={handlePostalCode} placeholder='Add postal code 📫' />
-      <input type='text' className='form-control mb-3' onChange={handleCity} placeholder='Add city 🌃' />
+      <input type='text' className='form-control mb-3' value={name} onChange={handleName} placeholder='Add name ✏️' />
+      <input type='text' className='form-control mb-3' value={lastName} onChange={handleLastName} placeholder='Add Last name ✏️' />
+      <input type='number' className='form-control mb-3' value={phone} onChange={handlePhone} placeholder='Add phone number 📞' />
+      <input type='text' className='form-control mb-3' value={address} onChange={handleAddress} placeholder='Add address 🏠' />
+      <input type='number' className='form-control mb-3' value={postalCode} onChange={handlePostalCode} placeholder='Add postal code 📫' />
+      <input type='text' className='form-control mb-3' value={city} onChange={handleCity} placeholder='Add city 🌃' />
       <input type='submit' className='btn btn-warning mb-3' />
     </form>
   )

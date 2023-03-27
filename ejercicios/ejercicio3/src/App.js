@@ -66,7 +66,7 @@ function App () {
   return (
     <div className='App container'>
       <h1>Lista de Contactos</h1>
-      <ContactsBook contacts={contacts} />
+      <ContactsBook contacts={contacts} setContacts={setContacts} />
       <Form setContacts={setContacts} />
     </div>
   )
