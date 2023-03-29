@@ -17,7 +17,6 @@ export default function Contacts ({ contacts, setContacts }) {
     if (event.target.tagName === 'BUTTON') {
       const newContacts = contacts.filter((contact) => contact.id !== parseInt(event.target.id))
       setContacts(newContacts)
-      console.log(typeof event.target.id, event.target.id)
     }
   }
   return (
