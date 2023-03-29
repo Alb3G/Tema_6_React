@@ -8,12 +8,18 @@ export default function Contacts ({ contacts, setContacts }) {
           <li className='list-group-item '>{lastName}</li>
           <li className='list-group-item '>{phone}</li>
           <li className='list-group-item '>{address} {postalCode} {city}</li>
-          <li className='list-group-item '><button type='button' className='btn btn-warning' id={id} onClick={setContacts}>Delete</button></li>
+          <li className='list-group-item '><button type='button' className='btn btn-warning' id={id} onClick={deleteContact}>Delete</button></li>
         </ul>
       </div>
     )
   })
-
+  function deleteContact (event) {
+    if (event.target.tagName === 'BUTTON') {
+      const newContacts = contacts.filter((contact) => contact.id !== parseInt(event.target.id))
+      setContacts(newContacts)
+      console.log(typeof event.target.id, event.target.id)
+    }
+  }
   return (
     <>
       {contactUl}
