@@ -9,28 +9,13 @@ export default function Form ({ setContacts }) {
   const [postalCode, setPostalCode] = useState('')
   const [city, setCity] = useState('')
 
-  function handleId () {
-    setId(id + 1)
-  }
-
-  function handleName (event) {
-    setName(event.target.value)
-  }
-  function handleLastName (event) {
-    setLastName(event.target.value)
-  }
-  function handlePhone (event) {
-    setPhone(event.target.value)
-  }
-  function handleAddress (event) {
-    setAddress(event.target.value)
-  }
-  function handlePostalCode (event) {
-    setPostalCode(event.target.value)
-  }
-  function handleCity (event) {
-    setCity(event.target.value)
-  }
+  const handleId = () => setId(id + 1)
+  const handleName = event => setName(event.target.value)
+  const handleLastName = event => setLastName(event.target.value)
+  const handlePhone = event => setPhone(event.target.value)
+  const handleAddress = event => setAddress(event.target.value)
+  const handlePostalCode = event => setPostalCode(event.target.value)
+  const handleCity = event => setCity(event.target.value)
 
   function submit (event) {
     event.preventDefault()

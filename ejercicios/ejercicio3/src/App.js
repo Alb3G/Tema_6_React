@@ -1,7 +1,7 @@
 import './App.css'
 import ContactsBook from './components/ContactsBook'
 import { useState } from 'react'
-import Form from './components/Form'
+import FormV2 from './components/Form'
 
 function App () {
   const [contacts, setContacts] = useState([
@@ -38,7 +38,7 @@ function App () {
     <div className='App container'>
       <h1>Lista de Contactos</h1>
       <ContactsBook contacts={contacts} setContacts={setContacts} />
-      <Form setContacts={setContacts} />
+      <FormV2 setContacts={setContacts} />
     </div>
   )
 }
