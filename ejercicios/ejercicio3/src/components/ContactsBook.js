@@ -1,4 +1,4 @@
-export default function Contacts ({ contacts, setContacts }) {
+export default function Contacts({ contacts, setContacts }) {
   const contactUl = contacts.map(({ id, name, lastName, address, city, postalCode, phone }) => {
     return (
       <div key={phone + id} className='d-inline-flex w-25'>
@@ -13,7 +13,7 @@ export default function Contacts ({ contacts, setContacts }) {
       </div>
     )
   })
-  function deleteContact (event) {
+  function deleteContact(event) {
     if (event.target.tagName === 'BUTTON') {
       const newContacts = contacts.filter((contact) => contact.id !== parseInt(event.target.id))
       setContacts(newContacts)
