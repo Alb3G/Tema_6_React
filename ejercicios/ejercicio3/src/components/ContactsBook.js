@@ -3,7 +3,7 @@ export default function Contacts ({ contacts, setContacts }) {
     return (
       <div key={phone + id} className='d-inline-flex w-25'>
         <ul key={id} className='list-group mb-3 mx-3 w-100'>
-          <li className='list-group-item active'>Contact</li>
+          <li className='list-group-item active'>Contact - {id}</li>
           <li className='list-group-item '>{name}</li>
           <li className='list-group-item '>{lastName}</li>
           <li className='list-group-item '>{phone}</li>
