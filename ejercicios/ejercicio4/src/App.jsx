@@ -1,18 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import useFetch from './hooks/useFetch'
 import Input from './components/Input'
 import Todos from './components/Todos'
 
 function App () {
   const [toDos, setToDos] = useState([])
 
-  useEffect(() => {
-    const URL = 'https://jsonplaceholder.typicode.com/todos'
-    fetch(URL)
-      .then(res => res.json())
-      .then(data => {
-        setToDos(data.slice(0, 20))
-      })
-  }, [])
+  const URL = 'https://jsonplaceholder.typicode.com/todos'
+  useFetch(URL, setToDos)
 
   return (
     <div className='App'>
