@@ -18,11 +18,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "./node_modules/standard/eslintrc.json"
-    ]
+    "extends": "./node_modules/standard/eslintrc.json",
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": {
     "production": [
