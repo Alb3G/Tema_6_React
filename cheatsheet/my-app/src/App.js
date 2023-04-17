@@ -4,11 +4,11 @@ import './App.css'
 // import FirstComponent, { SecondComponent } from './components/FirstComponent'
 
 // import { useState } from 'react'
-import UseContextComponent from './components/UseContextComp'
-import { createContext } from 'react'
+// import UseContextComponent from './components/UseContextComp'
+// import { createContext } from 'react'
 
-export const GlobalContext = createContext() // Creamos un contexto global fuera de la App para poder usarlo en cualquier componente.
-
+// export const GlobalContext = createContext() // Creamos un contexto global fuera de la App para poder usarlo en cualquier componente.
+import Router from './Router'
 function App () {
   // const [display, setDisplay] = useState(true)
   // const [count, setCount] = useState(0) // Lo que hacemos al pasarle por props el count y setCount es que no nos actualice a 0 el estado del contador y que nos guarde lo que vale.
@@ -21,9 +21,10 @@ function App () {
       <FirstComponent />
       <SecondComponent id={1} />
       <Counter /> */}
-      <GlobalContext.Provider value='Soy un string guardado en contexto'>
+      {/* <GlobalContext.Provider value='Soy un string guardado en contexto'>
         <UseContextComponent />
-      </GlobalContext.Provider>
+      </GlobalContext.Provider> */}
+      <Router />
     </div>
   )
 }
