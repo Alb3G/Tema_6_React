@@ -1,5 +1,8 @@
-export default function Record () {
+import { useParams } from 'react-router-dom'
+
+export default function Record (props) {
+  const { user } = useParams()
   return (
-    <div>Record</div>
+    <div>Record of {user}</div>
   )
 }
