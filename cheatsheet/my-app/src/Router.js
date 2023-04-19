@@ -13,7 +13,7 @@ export default function Router () {
         <nav className='styled-router'>
           <NavLink to='/' style={{ textDecoration: 'none' }}>Index</NavLink>
           <NavLink to='/dashboard' style={{ textDecoration: 'none', marginBottom: '1rem' }}>DashBoard</NavLink>
-          <NavLink to='/record/John' style={{ textDecoration: 'none' }}>Record</NavLink>
+          <NavLink to='/record/3' style={{ textDecoration: 'none' }}>Record</NavLink>
         </nav>
 
         <Routes>
