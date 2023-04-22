@@ -1,4 +1,5 @@
 import './Todos.css'
+
 export default function Todos ({ toDos, setToDos }) {
   const handleDelete = title => setToDos(toDos.filter(toDo => toDo.title !== title))
   const toggle = (e, index) => {
