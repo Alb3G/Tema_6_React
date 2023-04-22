@@ -1,8 +1,8 @@
-import './App.css'
-import Card from './components/card/Card'
+import Card from './components/Card'
+
 function App () {
   return (
-    <div className='App'>
+    <div className='d-flex gap-3 ms-3 justify-content-center'>
       <Card
         title='Invincible'
         paragraph='Super Hero strong as hell, he was betrayed by his own father and fought against him to death.'
@@ -10,10 +10,18 @@ function App () {
         href='https://en.wikipedia.org/wiki/Invincible_(comics)'
         buttonText='+ Info'
       />
+
       <Card
         title='Omni Man'
         paragraph='The father I hate this guy so much, such an ass'
         imageURL='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/59acf3d1-9e52-4ef0-bb6b-c2a1a7b3ec10/dfbrrxw-71184c06-8ea4-41b0-b3fa-28917ec45455.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU5YWNmM2QxLTllNTItNGVmMC1iYjZiLWMyYTFhN2IzZWMxMFwvZGZicnJ4dy03MTE4NGMwNi04ZWE0LTQxYjAtYjNmYS0yODkxN2VjNDU0NTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ElGeiIpHsxh9X4F8c0EV3FyJjuCIU1p9Kq3AUxIWJuQ'
+        href='https://es.wikipedia.org/wiki/Omni-Man'
+        buttonText='+ Info'
+      />
+      <Card
+        title='Omni Man'
+        paragraph='The father I hate this guy so much, such an ass'
+        imageURL='https://imgs.search.brave.com/A2zeho7eBbQK65h_HaIvSEmH6DPTww4oSXaULm-0AAU/rs:fit:400:400:1/g:ce/aHR0cHM6Ly9hdmF0/YXJmaWxlcy5hbHBo/YWNvZGVycy5jb20v/MjgwLzI4MDU2Mi5w/bmc'
         href='https://es.wikipedia.org/wiki/Omni-Man'
         buttonText='+ Info'
       />

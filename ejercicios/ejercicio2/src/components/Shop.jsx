@@ -1,10 +1,11 @@
 import List from './List'
-export default function Shop (props) {
+
+export default function Shop () {
   const shop = {
     electronics: [
-      { id: 27, product: 'Tv', brand: 'LG', model: 'XP7302', precio: 399 },
-      { id: 28, product: 'Equipo Hi-Fi', brand: 'Samsung', model: 'VF235', precio: 179 },
-      { id: 29, product: 'laptop', brand: 'Sony', model: 'XP7302', precio: 399 }
+      { id: 27, product: 'Tv', brand: 'LG', model: 'XP7302', price: 399 },
+      { id: 28, product: 'Equipo Hi-Fi', brand: 'Samsung', model: 'VF235', price: 179 },
+      { id: 29, product: 'laptop', brand: 'Sony', model: 'XP7302', price: 399 }
     ],
     food: [
       { id: 30, product: 'cookies', brand: 'Maria', price: 0.90 },
@@ -19,10 +20,10 @@ export default function Shop (props) {
 
   }
   return (
-    <div className='content'>
-      <List category='electronics' products={shop.electronics} />
-      <List category='food' products={shop.food} />
-      <List category='pets' products={shop.pets} />
+    <div>
+      <List name='Electronics' products={shop.electronics} />
+      <List name='Food' products={shop.food} />
+      <List name='Pets' products={shop.pets} />
     </div>
   )
 }
