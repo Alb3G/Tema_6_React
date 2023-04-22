@@ -1,7 +1,7 @@
-import './App.css'
-import ContactsBook from './components/ContactsBook'
 import { useState } from 'react'
-import FormV2 from './components/Form'
+import './App.css'
+import Agenda from './components/Agenda'
+import Form from './components/Form'
 
 function App () {
   const [contacts, setContacts] = useState([
@@ -31,14 +31,22 @@ function App () {
       city: 'Malaga',
       postalCode: 28000,
       phone: 612735861
+    },
+    {
+      id: 4,
+      name: 'Papurreitors',
+      lastName: 'Guzman Bichon',
+      address: 'C/Arriba',
+      city: 'Malaga',
+      postalCode: 28000,
+      phone: 612735861
     }
   ])
-
   return (
     <div className='App container'>
-      <h1>Lista de Contactos</h1>
-      <ContactsBook contacts={contacts} setContacts={setContacts} />
-      <FormV2 setContacts={setContacts} />
+      <h1 className='mx-3'>Contact List</h1>
+      <Agenda contacts={contacts} setContacts={setContacts} />
+      <Form setContacts={setContacts} />
     </div>
   )
 }

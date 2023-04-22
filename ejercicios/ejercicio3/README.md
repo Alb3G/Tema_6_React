@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+Ejercicio 3 – Agenda
+1. Crear un nuevo proyecto React y limpiamos lo que no nos haga falta. (Hecho)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. Nuestra App contendrá dos componentes: una agenda y un formulario, cada uno en su archivo. (Hecho)
 
-## Available Scripts
+3. Al nivel de la App, definiremos un array de contactos que serán objetos con la siguiente información:
+• Nombre, Apellidos, Dirección, Ciudad, Código Postal y teléfono.
+Crear 3 contactos iniciales. (Hecho)
 
-In the project directory, you can run:
+4. Crear el componente agenda que recibirá por props todos los contactos y devolverá una ul por cada
+uno. La ul tendrá tantos li como datos tenga el contacto. Los li se pueden hardcodear o hacer dinámicos. (Hecho)
 
-### `npm start`
+5. Crear la estructura del formulario en el componente, aún sin lógica. (Hecho)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+6. Cambiar el array de contactos para que pase a ser un estado con su valor inicial. (hook useState).
+Pasar el array por props al componente agenda y deberá funcionar igual que el Apartado 4. (Hecho)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+7. Dentro del componente del formulario, crearemos tantos hooks de useState como inputs tenga. Iremos
+actualizando los estados con los eventos change de los inputs de manera individual. (Hecho)
 
-### `npm test`
+8. Cuando se produzca el submit en el form:
+1. Evitaremos el comportamiento por defecto. (Hecho)
+2. Crearemos un nuevo objeto con la información de todos los estados (inputs) en ese momento. (Hecho)
+3. Llamaremos a la función que modifica el estado de los contactos (apartado 3) y le pasaremos el (Hecho)
+.  array tras añadirle el nuevo objeto. (Hecho)
+4. Vaciaremos los campos del formulario. (Hecho)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+9. Avanzado: Cada lista (contacto) tendrá un botón que eliminará dicho contacto del array global. (Hecho)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Nota: Para añadir un nuevo elemento a la lista, se puede utilizar el operador spread (...) : 
+setContactos(contactosActual => […contactosActual, nuevoContacto]);
