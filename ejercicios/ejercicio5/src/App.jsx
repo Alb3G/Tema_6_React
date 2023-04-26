@@ -14,17 +14,15 @@ function App () {
     <>
       <StateContext.Provider value={[toDos, setToDos]}>
         <BrowserRouter>
-          <nav className='navbar bg-body-tertiary bg-warning mb-3'>
-            <div className='container-fluid'>
-              <NavLink to='/Ejercicio1' className='navbar-brand linksColor'>Ejercicio1</NavLink>
-              <NavLink to='/Ejercicio2' className='navbar-brand linksColor'>Ejercicio2</NavLink>
-              <NavLink to='/Ejercicio3' className='navbar-brand linksColor'>Ejercicio3</NavLink>
-              <NavLink to='/Ejercicio4' className='navbar-brand linksColor'>Ejercicio4</NavLink>
-            </div>
+          <nav className='navbar bg-dark m-3 rounded p-3'>
+            <NavLink exact to='/' className='text-decoration-none text-light' activeClassName='active'>Ejercicio1</NavLink>
+            <NavLink to='/Ejercicio2' className='text-decoration-none text-light '>Ejercicio2</NavLink>
+            <NavLink to='/Ejercicio3' className='text-decoration-none text-light '>Ejercicio3</NavLink>
+            <NavLink to='/Ejercicio4' className='text-decoration-none text-light '>Ejercicio4</NavLink>
           </nav>
 
           <Routes>
-            <Route path='/Ejercicio1' element={<Ejercicio1 />} />
+            <Route exact path='/' element={<Ejercicio1 />} />
             <Route path='/Ejercicio2' element={<Ejercicio2 />} />
             <Route path='/Ejercicio3' element={<Ejercicio3 />} />
             <Route path='/Ejercicio4' element={<Ejercicio4 />} />
