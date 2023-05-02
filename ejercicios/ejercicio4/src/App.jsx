@@ -7,7 +7,7 @@ function App () {
   const [toDos, setToDos] = useState([])
 
   const URL = 'https://jsonplaceholder.typicode.com/todos'
-  useFetch(URL, setToDos)
+  useFetch(URL, setToDos, 20)
 
   return (
     <div className='App'>
